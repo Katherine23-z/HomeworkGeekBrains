@@ -25,6 +25,8 @@ public class Main {
 
         System.out.println(Dog.dogCounter());
 
+        System.out.println(Animal.getAnimalCounter());
+
 
     }
 }

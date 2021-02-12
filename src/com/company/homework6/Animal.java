@@ -2,9 +2,15 @@ package com.company.homework6;
 
 public abstract class Animal {
     private String name;
+    private static int animalCounter;
 
     public Animal(String name) {
         this.setName(name);
+        animalCounter++;
+    }
+
+    public static int getAnimalCounter(){
+        return animalCounter;
     }
 
     public String getName() {
