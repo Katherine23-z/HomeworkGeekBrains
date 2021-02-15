@@ -15,8 +15,11 @@ public class Plate {
         return food;
     }
 
-    public void decreaseFood(int countFood){
-            food-=countFood;
+    public boolean decreaseFood(int countFood){
+        if(food>=countFood) {
+                food -= countFood;
+                return true;
+            }return false;
         }
 
     public int addFood(int addFood){

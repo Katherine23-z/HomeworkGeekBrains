@@ -23,11 +23,6 @@ public class Main {
         plate.info();
         System.out.println(plate.addFood(10));
 
-
-
-
-
-
     }
 
 }
