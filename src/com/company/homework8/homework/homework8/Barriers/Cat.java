@@ -1,6 +1,6 @@
-package com.company.homework8;
+package homework.homework8.Barriers;
 
-public class Cat implements Moving{
+public class Cat implements Moving {
     private String name;
     private int RunDistance;
     private int jumpHeigh;

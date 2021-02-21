@@ -1,6 +1,8 @@
-package com.company.homework8;
+package homework.homework8.Barriers;
 
-public class RunRoad extends Barrier{
+import homework.homework8.Barriers.Barrier;
+
+public class RunRoad extends Barrier {
     private int distance;
 
     public RunRoad(int distance) {

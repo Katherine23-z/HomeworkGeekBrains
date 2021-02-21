@@ -1,4 +1,4 @@
-package com.company.homework8;
+package homework.homework8.Barriers;
 
 public class Main {
 

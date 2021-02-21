@@ -1,6 +1,8 @@
-package com.company.homework8;
+package homework.homework8.Barriers;
 
-public class Robot implements Moving{
+import homework.homework8.Barriers.Moving;
+
+public class Robot implements Moving {
     private String name;
     private int runDistance;
     private int jumpHeigh;

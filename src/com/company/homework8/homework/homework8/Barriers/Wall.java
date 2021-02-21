@@ -1,6 +1,8 @@
-package com.company.homework8;
+package homework.homework8.Barriers;
 
-public class Wall extends Barrier{
+import homework.homework8.Barriers.Barrier;
+
+public class Wall extends Barrier {
     private int heigh;
 
 
