@@ -1,16 +1,18 @@
 package homework.homework8.Exceptions9;
 
 public class Main {
-    public static final int arrLength = 4;
+    private static final int arrLength = 4;
 
     public static void main(String[] args) {
 
-        String[][] str = {{"1", "3", "5", "%"}, {"0", "5", "4", "2"}, {"4", "7", "3", "8"}, {"2", "5", "3", "5"}};
-        try {
+        String[][] str = {{"4", "24", "6", "%",}, {"5", "4", "6", "54"}, {"86", "5", "21", "5",}, {"54", "5", "6", "44"}};
+
+        try{
             System.out.println(foo(str));
         } catch (MyArraySizeException e) {
             throw new MyArraySizeException("Неверный размер массива");
-        }
+    }
+
 
 
     }
