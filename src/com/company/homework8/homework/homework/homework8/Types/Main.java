@@ -31,6 +31,10 @@ public class Main {
         System.out.println(appleBox.getWeight());
         System.out.println(appleBox1.getWeight());
 
+        String str1 = "12";
+        Integer.parseInt(str1);
+
+
 
     }
 
