@@ -2,9 +2,13 @@ package homework.homework8.Threads1;
 
 
 import java.util.Arrays;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class Main {
-    static final int SIZE = 10000000;
+    static final int SIZE = 10;
     static final int HALF = SIZE / 2;
 
     public static void main(String[] args) {
@@ -13,12 +17,41 @@ public class Main {
             arr[i] = 1;
         }
 
-        arrayTimeCounter(arr);
 
-        twoThreadsTimeCounter(arr);
+        //arrayTimeCounter(arr);
+
+        //twoThreadsTimeCounter(arr);
+        //System.out.println(Arrays.toString(arr));
 
 
 
+        float[] array1 = new float[HALF];
+        float[] array2 = new float[HALF];
+
+        long a = System.currentTimeMillis();
+        System.arraycopy(arr, 0, array1, 0, HALF);
+        System.arraycopy(arr, HALF, array2, 0, HALF);
+
+        ExecutorService service = Executors.newFixedThreadPool(2);
+        service.submit(() -> calculate(array1));
+        service.submit(() -> calculate(array2));
+
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array2));
+
+
+        System.arraycopy(array1, 0, arr, 0, HALF);
+        System.arraycopy(array2, 0, arr, HALF, HALF);
+
+
+        long b = System.currentTimeMillis();
+        long result = b-a;
+
+        System.out.println(result);
+        System.out.println(Arrays.toString(arr));
+
+
+        service.shutdown();
 
     }
 
